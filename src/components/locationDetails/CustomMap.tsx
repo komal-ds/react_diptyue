@@ -1,7 +1,7 @@
 import * as React from "react";
 import { GoogleMap, LoadScript, Marker } from "@react-google-maps/api";
 // import marker from "../images/marker.png";
-import marker from "../../images/logo_diptyque.avif"
+import marker from "../../images/logo_diptyque_2.png"
 const containerStyle = {
   width: "100%",
   height: "100%",
