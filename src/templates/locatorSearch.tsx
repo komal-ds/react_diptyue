@@ -8,6 +8,8 @@ import SearchLayout from "../components/locatorPage/SearchLayout";
 import {  AnswerExperienceConfig  } from "../config/globalConfig";
 import Footer from "../components/layouts/footer";
 import Header from "../components/layouts/header";
+import favicon from "../images/logo_diptyque_2.png"
+
 
 export const config: TemplateConfig = {
   stream: {
@@ -49,6 +51,14 @@ export const getHeadConfig: GetHeadConfig<TemplateRenderProps> = ({relativePrefi
         type: "meta",
         attributes: {
           description: document.description,
+        },
+      },
+      {
+        type: "link",
+        attributes: {
+          rel: "icon",
+          type: "image/x-icon",
+          href: favicon,
         },
       },
     ],
