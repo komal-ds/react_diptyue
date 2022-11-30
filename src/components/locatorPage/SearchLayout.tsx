@@ -302,14 +302,14 @@ const SearchLayout = (): JSX.Element => {
 
   return (
     <>
-           <div className="header-title  ">
-        
+      {/* <div className="header-title  "> */}
+
         <Herobanner ></Herobanner>
-      </div>
-      <Modal isOpen={modalIsOpen} onRequestClose={closeModal} style={customStyles} >
+      {/* </div> */}
+      {/* <Modal isOpen={modalIsOpen} onRequestClose={closeModal} style={customStyles} >
         <StandardFacets />
-      </Modal>
-      {/* <CustomFacets/> */}
+      </Modal> */}
+      <CustomFacets />
       <div className=" mx-auto px-9 w-full">
         <div className="breadcrumb">
           <div className="boxes">
@@ -355,8 +355,8 @@ const SearchLayout = (): JSX.Element => {
                   </div>
                 )
                 }
-
-                <div className="pagination-bottom"> <Pagination /> </div>
+                <Pagination /> 
+                {/* <div className="pagination-bottom"> <Pagination /> </div> */}
                 {/* </div> */}
               </div>
             </PerfectScrollbar>

@@ -92,7 +92,7 @@ const LocationCard: CardComponent<Location> = ({ result }) => {
         {/* <button onClick={getDirectionUrl} >getlocation</button> */}
        {/* {result.rawData.c_heading.viewDetails? */}
         <a className="consulation" href={`${url}`}>
-          {/* {result.rawData.c_heading.viewDetails} */}View Details
+          {/* {result.rawData.c_heading.viewDetails} */}View Store Details
           <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
             <path id="Icon_ionic-md-arrow-forward" data-name="Icon ionic-md-arrow-forward" d="M5.977,14.977h12.15l-5.6,5.6,1.45,1.4,8-8-8-8-1.4,1.4,5.55,5.6H5.977Z" transform="translate(-5.977 -5.977)"></path>
           </svg>

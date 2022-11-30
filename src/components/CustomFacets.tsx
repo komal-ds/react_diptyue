@@ -18,7 +18,11 @@ import { StandardFacets} from "@yext/search-ui-react";
           }}
           // cssCompositionMethod="assign"
           searchOnChange={true}
-          defaultExpanded={true}
+          defaultExpanded={false}
+          collapsible={true}
+          // excludedFieldIds?: string[];
+          showOptionCounts={true}
+          showMoreLimit={5}
         />
       </div>
     );

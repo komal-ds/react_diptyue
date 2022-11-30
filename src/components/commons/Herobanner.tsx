@@ -152,7 +152,7 @@ const Herobanner = () => {
         </div>
 
         <div className="flex justify-between px-6 ">
-          <FilterAwesome></FilterAwesome>
+          {/* <FilterAwesome></FilterAwesome> */}
           <button className="current-location hide-mob" title="Search using your current location!" id="useLocation" onClick={getUsersLocation}>
             {/* {svgIcons.usemylocationicon} */}
            Use my location</button>
