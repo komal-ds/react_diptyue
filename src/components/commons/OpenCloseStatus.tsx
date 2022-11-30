@@ -207,7 +207,7 @@ export default function OpenCloseStatus(props:any){
     <>
       <div className="open-heading">
             {props.hours && props.hours.reopenDate?
-                <p className=" text-xs md:text-sm">Temp Closed</p>:props.hours?
+                <p className=" text-xs md:text-sm">Temporarily Closed</p>:props.hours?
                 <p className=" text-xs md:text-sm closeing-div">&nbsp;{openClose.formatOpenNowString(props.hours, parsedOffset)}</p>:
                 <p className=" text-xs md:text-sm">Closed</p>
             }

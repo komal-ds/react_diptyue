@@ -17,6 +17,7 @@
     "node": ">=17"
   },
   "dependencies": {
+    "@css-modules-theme/core": "^2.3.0",
     "@googlemaps/markerclusterer": "^2.0.11",
     "@googlemaps/react-wrapper": "^1.1.35",
     "@headlessui/react": "^1.6.6",

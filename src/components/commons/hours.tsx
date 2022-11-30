@@ -172,7 +172,7 @@ console.log(dayDate,"split")
           {day.openIntervals.map((res:any,index:Number)=>{
             return(
               <>
-              <span className="mr-2">{res.start}</span> -<span className="ml-2">{res.end}</span><span> | </span>
+              <span className="mr-2">{res.start}</span> -<span className="ml-2">{res.end}</span>
               </>
             )
           })}
@@ -211,31 +211,26 @@ console.log(hours,"gnfdg")
 
   return (
     <>
-      <div className=" text-xl font-semibold mb-4">{title}</div>
-      <table className="day-hrs">
-        <thead className="sr-only">
-          <tr>
-            <th>{StaticData.DayofWeek}</th>
-            <th>{StaticData.Hours}</th>
-          </tr>
-        </thead>
-
-         {hours && hours.reopenDate ? (
-              <span>{additionalHoursText} <br />
-            <span>  {StaticData.Reopenmessage} {dateNewFormat} </span>
-          
-         
+      <div>
+       {title}
+        <table>
+          <thead className="sr-only">
+            <tr>
+              <th>Day of the Week</th>
+              <th>Hours</th>
+            </tr>
+          </thead>
+          {props.hours && props.hours.reopenDate ? (
+            <span className="text-base">
+              {props.additionalHoursText} <br /> <br />
+              The Store will reopen at {dateNewFormat}
+              <br /> <br /> 
             </span>
-            ) : (
-                            <>
-                            {renderHours(hours)}
-                 
-                            </>
-            )}
-       
-      </table>
-     
-    
+          ) : (
+            <>{renderHours(hours)}</>
+          )}
+        </table>
+      </div>
     </>
   );
 };

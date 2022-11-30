@@ -4,13 +4,13 @@ import { useSearchState, Result } from "@yext/search-headless-react";
 import * as React from 'react';
 import { useEffect, useRef, useState } from 'react';
 import { twMerge, useComposedCssClasses } from '..//../hooks/useComposedCssClasses';
-import mapicon from "..//../images/mapicon.png";
+import mapicon from "..//../images/logo_diptyque_2.png";
 import Groupnear from "..//../images/Groupnear.png";
 import phone from "..//../images/phone.svg";
 import GetDirection from "../commons/GetDirection";
 import addressicon from "../../images/marker.svg";
 import watch from "../../images/watch.svg";
-import cluster from "../../images/cluser.png"
+import cluster from "../../images/newcluster.png"
 // import Hours from '..//../components/commons/hours';
 import Hours from '..//../components/commons/hours';
 import { renderToString } from "react-dom/server";
@@ -118,9 +118,9 @@ function UnwrappedGoogleMaps({
 
 //new
 let marker_hover_icon = {
-  url:cluster,
+  url:mapicon,
   fillColor: pinStyles.fill,
-  scale: 1.1,
+  scale: 1.6,
   fillOpacity: 1,
   strokeColor: pinStyles.stroke,
   strokeWeight: 1,
@@ -177,7 +177,7 @@ function sleep(ms) {
   const Usermarker1 = new google.maps.Marker({
     position,
     map,
-    icon: Groupnear
+    icon: addressicon
   });
   usermarker.current.push(Usermarker1);
 

@@ -64,7 +64,7 @@ const GetDirection = (props: Cta) => {
   } = props;
 
 
-  console.log(props,'?apropdd????')
+  // console.log(props,'?apropdd????')
   const getDirectionUrl = () => {
     var origin: any = null;
     if (props.address.city) {

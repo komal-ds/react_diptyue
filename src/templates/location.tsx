@@ -103,7 +103,7 @@ export const config: TemplateConfig = {
       // "c_ogtags",
       // "c_heading",
       // "c_ctabutton",
-      // "additionalHoursText"
+       "additionalHoursText"
 
     ],
 
@@ -366,6 +366,7 @@ const Location: Template<ExternalApiRenderData> = ({
     hours,
     address,
     mainPhone,
+    description,
     yextDisplayCoordinate,
     dm_directoryParents,
     c_decsec,
@@ -567,20 +568,18 @@ const Location: Template<ExternalApiRenderData> = ({
           }
           template={"location"}
         />
-
-
-        {/* <Opening timezone={timezone} hours={hours}></Opening> */}
-        {/* <OpenCloseStatus ></OpenCloseStatus> */}
+<PhotoSlider  photoGallery={photoGallery}
+ />
+ <div className="container-fluid px-24 py-6">
+ <h1 className="text-3xl text-black text-center pb-4 ">ABOUT DIPTYQUE</h1>
+{description}
+</div>
 
         {hours ? <>
           <div className="open-heading text-4xl"  >
             <OpenClose timezone={timezone} hours={hours} deliveryHours={hours}></OpenClose>
           </div></> : <></>
-
         }
-
-
-        {/* <OpenCloseStatus timezone={timezone} hours={hours}></OpenCloseStatus> */}
 
         <LocationInformation
           prop={hours}
@@ -594,18 +593,9 @@ const Location: Template<ExternalApiRenderData> = ({
           c_ctabutton={c_ctabutton}
           timezone={timezone}
           additionalHoursText={additionalHoursText}
-
+hours={hours}
         />
-        <div>
 
-        </div>
-
-        {/* <TrustBoxContainer></TrustBoxContainer> */}
-
-
-        {/* <>
-          <About photoGallery={photoGallery} c_decsec={c_decsec} />
-        </> */}
 
         {/* {c_booking.button.label && c_booking.button.link && c_booking.cta.label && c_booking.cta.link ? ( */}
 
@@ -712,14 +702,13 @@ const Location: Template<ExternalApiRenderData> = ({
             baseUrl={relativePrefixToRoot}
             coords={yextDisplayCoordinate}
             slug={slug}
-            service={c_Diptyqueervices}
             c_heading={c_heading}
 
           />
         </div>
 
-        <div className="border-2 text-white text-center bg-[#cbb081] border-[#cbb081] p-2"> <a href="index.html">View all location</a>
-        </div>
+        {/* <div className="border-2 text-white text-center bg-[#cbb081] border-[#cbb081] p-2"> <a href="index.html">View all location</a>
+        </div> */}
 
         {/* <div className="bg-[#3a356d] text-left p-12 ">
           <p className="pb-2 text-white text-xl text-semibold">{c_shopdata.textlistdata[0]}</p>

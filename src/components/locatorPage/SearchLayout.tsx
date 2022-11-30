@@ -6,13 +6,14 @@ import { Location } from "..//../types/search/locations";
 import LocationCard from "./LocationCard";
 import { GoogleMaps } from "./GoogleMaps";
 import { useSearchState, Result } from "@yext/search-headless-react";
-// import Modal from 'react-modal';
+import Modal from 'react-modal';
 import { AnswerExperienceConfig, googleMapsConfig, limit } from "..//../config/globalConfig";
 import Herobanner from "../commons/Herobanner";
 import 'react-perfect-scrollbar/dist/css/styles.css';
 import Geocode from "react-geocode";
 import PerfectScrollbar from 'react-perfect-scrollbar';
 import useFetchResults from "../../hooks/useFetchResults";
+import CustomFacets from "../CustomFacets";
 
 const SearchLayout = (): JSX.Element => {
 
@@ -301,10 +302,14 @@ const SearchLayout = (): JSX.Element => {
 
   return (
     <>
-
-      {/* <Modal isOpen={modalIsOpen} onRequestClose={closeModal} style={customStyles} >
+           <div className="header-title  ">
+        
+        <Herobanner ></Herobanner>
+      </div>
+      <Modal isOpen={modalIsOpen} onRequestClose={closeModal} style={customStyles} >
         <StandardFacets />
-      </Modal> */}
+      </Modal>
+      {/* <CustomFacets/> */}
       <div className=" mx-auto px-9 w-full">
         <div className="breadcrumb">
           <div className="boxes">

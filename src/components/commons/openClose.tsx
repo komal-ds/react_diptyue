@@ -257,7 +257,7 @@ const OpenClose = (props: Hours) => {
   return (
     <>
       {props.hours && props.hours.reopenDate ? (
-        <span>Temp Closed</span>
+        <span>Temporarily Closed</span>
       ) : (
         <> {renderHours(hours, deliveryHours)}</>
       )}

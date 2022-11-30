@@ -19,7 +19,7 @@ const metersToMiles = (meters: number) => {
 
 const LocationCard: CardComponent<Location> = ({ result }) => {
 
-  const { address, hours, mainPhone, timezone,c_heading } = result.rawData;
+  const { address, hours,additionalHoursText, mainPhone, timezone,c_heading } = result.rawData;
   const formattedPhone = formatPhoneNumber(mainPhone);
 
   const [timeStatus, setTimeStatus] = useState("");
@@ -75,7 +75,7 @@ const LocationCard: CardComponent<Location> = ({ result }) => {
 
               </div>
               <div className={timeStatus + " daylist"} >
-                <Hours key={result.rawData.id} hours={hours} /></div>
+                <Hours key={result.rawData.id} hours={hours} additionalHoursText={additionalHoursText}/></div>
             </div>
 
           </div> </div>
@@ -87,12 +87,12 @@ const LocationCard: CardComponent<Location> = ({ result }) => {
         {/* <GetDirection latitude={result.rawData.yextDisplayCoordinate?.latitude} longitude={result.rawData.yextDisplayCoordinate?.longitude} /> */}
 
         {result.rawData.displayCoordinate ?
-          <GetDirection label="get" buttonText="Direction" address={address} latitude={result.rawData.displayCoordinate?.latitude} longitude={result.rawData.displayCoordinate?.longitude} />
-          : <GetDirection label="get" address={address} buttonText="Direction" latitude={result.rawData.yextDisplayCoordinate?.latitude} longitude={result.rawData.yextDisplayCoordinate?.longitude} />}
+          <GetDirection label="View on Map" buttonText="Direction" address={address} latitude={result.rawData.displayCoordinate?.latitude} longitude={result.rawData.displayCoordinate?.longitude} />
+          : <GetDirection label="View on Map" address={address} buttonText="Direction" latitude={result.rawData.yextDisplayCoordinate?.latitude} longitude={result.rawData.yextDisplayCoordinate?.longitude} />}
         {/* <button onClick={getDirectionUrl} >getlocation</button> */}
        {/* {result.rawData.c_heading.viewDetails? */}
         <a className="consulation" href={`${url}`}>
-          {/* {result.rawData.c_heading.viewDetails} */}view details
+          {/* {result.rawData.c_heading.viewDetails} */}View Details
           <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
             <path id="Icon_ionic-md-arrow-forward" data-name="Icon ionic-md-arrow-forward" d="M5.977,14.977h12.15l-5.6,5.6,1.45,1.4,8-8-8-8-1.4,1.4,5.55,5.6H5.977Z" transform="translate(-5.977 -5.977)"></path>
           </svg>

@@ -21,7 +21,6 @@ type props = {
   baseUrl: any;
   coords: any;
   slug: any;
-  what3WordsAddress: any;
   c_heading: any;
 
 };
@@ -127,9 +126,9 @@ const NearByLocation = (entities: props) => {
     <>
       <div className="nearby-sec">
         <div className="container">
-          {/* <div className="w-full text-center">
-            <h3 className="sec_heading font-bold">Nearby Location</h3>
-          </div> */}
+          <div className="w-full text-center">
+            <h3 className="text-3xl pl-76 font-bold">NEARBY LOCATION'S</h3>
+          </div>
           <Splide
             id="splide-nearby"
             options={{
@@ -216,14 +215,15 @@ const NearByLocation = (entities: props) => {
                   return (
                     <SplideSlide key={index}>
                       <div className="near-location">
+                      <div className="flex flex-row">
                         <h4>
                           <a href={`/${url}`}>{e.name}</a>
                         </h4>
-                        <div className="store-phone">
+                      
 
-                          <p>
+                          <h4 className="pl-48">
                             {metersToMiles(e.distance)} mi
-                          </p>
+                          </h4>
                         </div>
                         <div className="store-address">
                           <svg
@@ -253,8 +253,9 @@ const NearByLocation = (entities: props) => {
                             {e.address?.postalCode}, {regionNames.of(e.address?.countryCode)}
                           </p> */}
                         </div>
+            
                         {e.mainPhone ?
-                          <div className="store-phone">
+                          <div className="phone flex flex-row ">
                             <svg
                               xmlns="http://www.w3.org/2000/svg"
                               width="23.987"
@@ -282,7 +283,7 @@ const NearByLocation = (entities: props) => {
                             </p>
                           </div>
                           : ""}
-                        <div className="store-link">   
+                        <div className="store-link flex flex-row">   
                         {/* {e.c_heading.getDirection ? */}
                           <Link
                             data-ya-track="directions"
