@@ -38,9 +38,31 @@ export const config: TemplateConfig = {
 };
 
 
-export const getPath: GetPath<TemplateProps> = () => {
-  return `/locatorSearch`;
+// export const getPath: GetPath<TemplateProps> = () => {
+//   return `/locatorSearch`;
+// };
+
+
+
+export const getPath: GetPath<TemplateProps> = ({ document }) => {
+  var url = "";
+  var name: any = document.name.toLowerCase();
+  var string: any = name.toString();
+  let result: any = string.replaceAll(" ", "-");
+  if (!document.slug) {
+    url = `index.html`;
+  } else {
+    url = `${document.slug.toString()}.html`;
+  }
+
+  return url;
 };
+
+
+
+
+
+
 
 export const getHeadConfig: GetHeadConfig<TemplateRenderProps> = ({relativePrefixToRoot, path, document}): HeadConfig => {
   return {
