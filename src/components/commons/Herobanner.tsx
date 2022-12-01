@@ -133,10 +133,14 @@ const Herobanner = () => {
                 fieldApiName: "address.postalCode",
 
               },
-              // {
-              //   entityType: "location",
-              //   fieldApiName: "builtin.location",
-              // },
+              {
+                entityType: "location",
+                fieldApiName: "builtin.location",
+              },
+              {
+                entityType: "location",
+                fieldApiName: "builtin.countryCode",
+              },
             ]}
 
 

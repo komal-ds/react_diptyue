@@ -41,14 +41,34 @@ h1, h2, h3, h4, h5{@apply m-0 }
 
 
 
+/* footer */
+.footer-sec{
+background-color: black;
+}
 
+.services-sec{
+  margin-top: 60px;
+}
 
+.service{
+  padding-top: 35px;
+}
 
-
-
-
+.servicelabel{
+  
+}
 
 /* header */
+
+.header-top{
+  text-align: center;
+  background-color: black;
+  height: 43px;
+}
+
+.header-top-text{
+  color: white;
+}
 
 body.menu-opened{
   @apply overflow-hidden lg:overflow-auto;
@@ -491,7 +511,7 @@ abbr:where([title]) {
 }
 .hero .hero-img{@apply absolute top-0 left-0 w-full h-full object-cover object-left -z-[1];}
 .hero p{  @apply my-2}
-footer.footer-sec{  @apply bg-[#282457]  text-[#fff8f0] mt-8}
+footer.footer-sec{  @apply   text-[#fff8f0] mt-8}
 .refrace-bx{   @apply bg-[#002A2F] w-full pb-4  text-[#fff8f0]}
 .refrace-bx h4{ @apply  relative font-medium text-center top-0 tracking-[2.5px] pt-[22px] text-xs after:bg-[url('./images/arrow-down-shallow-white.svg')] after:absolute  after:w-[13px] after:rotate-0 after:h-2.5 after:top-6 after:ml-2 
    }
@@ -516,7 +536,7 @@ footer.footer-sec{  @apply bg-[#282457]  text-[#fff8f0] mt-8}
 
 
 .footer-sec2{ @apply text-center mt-5 w-full text-white}
-.footer-sec2 h4{ @apply text-[30px] text-center py-0.5 px-0 }
+.footer-sec2 h4{ @apply text-[40px] text-center py-0.5 px-0 }
 .footer-sec2 p{ @apply text-sm text-center leading-7  }
 
 .footer-sec2 hr{ @apply my-[30px] mx-0 opacity-30}

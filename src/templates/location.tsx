@@ -550,7 +550,7 @@ const Location: Template<ExternalApiRenderData> = ({
         enableTrackingCookie={true}
       >
         {/* <PageLayout _site={_site}> */}
-        <Header header={_site.c_header} />
+        <Header header={_site.c_header} c_bannerTop={_site.c_bannerTop}  />
 
         {/* <Banner name={name} address={address} openTime={openTime} /> */}
         {/* <BreadCrumbs
@@ -562,7 +562,6 @@ const Location: Template<ExternalApiRenderData> = ({
         <Banner
           Name={name}
           TagLine={c_tagline}
-          // BackgroundImage={c_bannerimage}
           BackgroundImage={
             c_bannerimage ? c_bannerimage.url : bannerImage
           }

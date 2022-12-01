@@ -27,7 +27,8 @@ export const config: TemplateConfig = {
       "c_footerOrders",
       "c_footerNewatdiptyque",
       "c_footerMostpopular",
-      "c_service"
+      "c_service",
+      "c_bannerTop"
     ],
     localization: {
       locales: ["en_GB"],
@@ -75,7 +76,8 @@ const providerOptions: google.maps.MapOptions = {
 
 return (
     <>
-    <Header header={_site.c_header} />
+    <Header header={_site.c_header} c_bannerTop={_site.c_bannerTop} />
+  {/* <img src={_site.c_bannerLocator.bannerImage.url}></img> */}
       <PageLayout>
         <SearchHeadlessProvider
             experienceKey={AnswerExperienceConfig.experienceKey}

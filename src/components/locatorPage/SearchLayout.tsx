@@ -14,6 +14,7 @@ import Geocode from "react-geocode";
 import PerfectScrollbar from 'react-perfect-scrollbar';
 import useFetchResults from "../../hooks/useFetchResults";
 import CustomFacets from "../CustomFacets";
+import Banner from "../locationDetails/banner";
 
 const SearchLayout = (): JSX.Element => {
 
@@ -24,6 +25,7 @@ const SearchLayout = (): JSX.Element => {
   const [inputvalue, setInputValue] = useState('');
   const [check, setCheck] = useState(false);
   const [optionclick, setOptionClick] = useState(true);
+  
   var searchKey: any;
   let onLoad = true;
   // useEffect(() => {
@@ -302,10 +304,10 @@ const SearchLayout = (): JSX.Element => {
 
   return (
     <>
-      {/* <div className="header-title  "> */}
+      <div className="header-title  ">
 
         <Herobanner ></Herobanner>
-      {/* </div> */}
+      </div>
       {/* <Modal isOpen={modalIsOpen} onRequestClose={closeModal} style={customStyles} >
         <StandardFacets />
       </Modal> */}
